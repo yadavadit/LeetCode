@@ -7,9 +7,7 @@ class Solution:
         for char in s:
             if char in pairs.values():
                 stack.append(char)
-            elif char in pairs:
-                if not stack or stack[-1] != pairs[char]:
-                    return False
+            elif stack and stack[-1] == pairs[char]:
                 stack.pop()
             else:
                 return False
