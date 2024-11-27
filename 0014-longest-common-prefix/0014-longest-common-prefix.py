@@ -3,7 +3,7 @@ class Solution:
         prefix = ''
         word = strs[0]
         for i in range(len(word)):
-            for s in strs:
+            for s in strs[1:]:
                 if i >= len(s) or s[i] != word[i]:
                     return prefix
             prefix += word[i]
